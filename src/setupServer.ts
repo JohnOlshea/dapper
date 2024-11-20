@@ -8,7 +8,6 @@ import cookieSession from 'cookie-session';
 import Logger from 'bunyan';
 import { config } from './config';
 
-
 const SERVER_PORT = 5000;
 const log: Logger = config.createLogger('server');
 

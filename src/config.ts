@@ -4,6 +4,7 @@ import bunyan from 'bunyan';
 dotenv.config({});
 
 class Config {
+  public DATABASE_URL: string | undefined;
   public JWT_TOKEN: string | undefined;
   public NODE_ENV: string | undefined;
   public SECRET_KEY_ONE: string | undefined;
@@ -11,6 +12,7 @@ class Config {
   public CLIENT_URL: string | undefined;
 
   constructor() {
+    this.DATABASE_URL = process.env.DATABASE_URL;
     this.JWT_TOKEN = process.env.JWT_TOKEN || '1234';
     this.NODE_ENV = process.env.NODE_ENV || '';
     this.SECRET_KEY_ONE = process.env.SECRET_KEY_ONE || '';
