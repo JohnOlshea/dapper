@@ -65,8 +65,9 @@ export class DapperServer {
     applicationRoutes(app);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private apiMonitoring(app: Application): void {
-    console.log(app);
+    console.log('monitoring');
   }
 
   private globalErrorHandler(app: Application): void {
@@ -116,7 +117,8 @@ export class DapperServer {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private socketIOConnections(io: Server): void {
-    console.log(io);
+    console.log('socket');
   }
 }
