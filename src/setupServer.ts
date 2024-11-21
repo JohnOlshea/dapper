@@ -40,7 +40,7 @@ export class DapperServer {
         name: 'session',
         keys: [config.SECRET_KEY_ONE!, config.SECRET_KEY_TWO!],
         maxAge: 24 * 7 * 3600000,
-        secure: config.NODE_ENV !== 'development',
+        secure: config.NODE_ENV !== 'development'
       })
     );
     app.use(hpp());
@@ -65,7 +65,7 @@ export class DapperServer {
     applicationRoutes(app);
   }
 
-  private apiMonitoring(app: Application): void { }
+  private apiMonitoring(app: Application): void {}
 
   private globalErrorHandler(app: Application): void {
     app.all('*', (req: Request, res: Response) => {
@@ -114,7 +114,5 @@ export class DapperServer {
     });
   }
 
-  private socketIOConnections(io: Server): void {
-  }
-
+  private socketIOConnections(io: Server): void {}
 }
